@@ -1,0 +1,264 @@
+h1,
+h2,
+h3,
+p,
+a {
+  color: white;
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  text-align: center;
+}
+
+.App-header {
+  background: rgb(214, 91, 166);
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(195, 111, 220, 1) 91%
+  );
+  height: 20px;
+  width: auto;
+}
+/* Full-screen Splash Screen */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #4b5395;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Shows hand icon */
+}
+
+/* Rectangular box with curved edges */
+.welcome-box {
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(195, 111, 220, 1) 91%
+  );
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Animated Text - Scale Up & Down */
+.welcome-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: scaleUpDown 1.5s infinite ease-in-out;
+  white-space: nowrap;
+}
+
+/* Small Tap-to-Continue Text */
+.tap-text {
+  color: #ddd;
+  font-size: 1rem;
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeInOut 1.5s infinite ease-in-out;
+}
+
+/* Text Animation */
+@keyframes scaleUpDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Tap text fades in & out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
+.container {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-header h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+.intro-copy {
+  background: #4b5395;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.intro-copy p {
+  font-size: 1rem;
+  text-align: left;
+}
+.quiz-btn {
+  background: rgb(214, 91, 166);
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(195, 111, 220, 1) 91%
+  );
+  border: 0;
+  padding: 15px 40px;
+  margin: 20px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Question-1 {
+  padding-bottom: 20px;
+}
+
+.Question-btn {
+  background: white;
+  padding: 15px 40px;
+  margin: 20px;
+  border-radius: 24px;
+  text-align: center;
+  color: #383d6e;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  width: 90%;
+  border: 0;
+}
+
+.Question-btn:active,
+.Question-btn-selected {
+  background: rgb(214, 91, 166);
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(108, 207, 246, 1) 91%
+  );
+  color: white;
+}
+
+.next-btn {
+  background: rgb(214, 91, 166);
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(195, 111, 220, 1) 91%
+  );
+  padding: 10px 30px;
+  margin: 20px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: 0;
+}
+
+.dosha-info p {
+  text-align: left;
+}
+
+.dosha-title {
+font-size: 3rem;
+margin-top: 0;
+margin-bottom: 20px;
+display: inline-block;
+  background:linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(108, 207, 246, 1) 91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dosha-info h2 {
+  margin-top: 30px;
+}
+.dosha-info {
+   background: #4b5395;
+  margin: 20px;
+  padding: 20px 50px;
+  border-radius: 24px;
+  box-shadow: 0px 0px 37px -2px rgba(195,111,220,0.89);
+}
+
+.dosha-info ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  color: white;
+}
+
+.dosha-info li {
+  padding-bottom: 13px;
+}
+.dosha-btns {
+  text-align: center;
+}
+
+.dosha-btn {
+  background: rgb(214, 91, 166);
+  background: linear-gradient(
+    198deg,
+    rgba(214, 91, 166, 1) 19%,
+    rgba(195, 111, 220, 1) 91%
+  );
+  padding: 10px 30px;
+  margin: 20px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  border: 0;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Question-btn {
+    width: 100%;
+  }
+}
