@@ -24,158 +24,128 @@ function Questions(props) {
   const quizQuestions = [
     {
       id: 0,
-      question: "How would you describe your body type and how you look?",
+      question: "How is your hair?",
       options: [
-        {
-          label:
-            "I am thin, lanky, and slender with prominent joints and thin muscles",
-          value: "a",
-        },
-        {
-          label:
-            "I have a medium, symmetrical build with good muscle development",
-          value: "b",
-        },
-        { label: "I have a broad and full build", value: "c" },
+        { label: "Thick, oily, curly", value: "c" },
+        { label: "Soft, fine, tends to be red/blond", value: "b" },
+        { label: "Dry, frizzy, brittle", value: "a" },
       ],
     },
     {
       id: 1,
-      question: "How would you best describe your metabolism?",
+      question: "How are your teeth?",
       options: [
-        { label: "Fast metabolism, difficult to gain weight", value: "a" },
-        {
-          label: "Balanced metabolism, your weight stays fairly consistent",
-          value: "b",
-        },
-        { label: "Slow metabolism, tendency to gain weight", value: "c" },
+        { label: "Strong, white, well-shaped ", value: "c" },
+        { label: "Medium-sized, yellowish, soft gums ", value: "b" },
+        { label: "Crooked, gapped, sensitive gums ", value: "a" },
       ],
     },
     {
       id: 2,
-      question: "Which best describes your skin?",
+      question: "How do your eyes look?",
       options: [
-        {
-          label: "My skin is dry, thin, and prone to wrinkles, it tans easily",
-          value: "a",
-        },
-        { label: "My skin is prone to irritation", value: "b" },
-        { label: "My skin is thick, moist, and smooth", value: "c" },
+        { label: "Big, soft, thick eyelashes ", value: "c" },
+        { label: "Medium-sized, sharp gaze", value: "b" },
+        { label: "Small, active, quick-moving", value: "a" },
       ],
     },
     {
       id: 3,
-      question: "Which best describes your hair?",
+      question: "How is your appetite?",
       options: [
-        { label: "My hair is dry, brittle or frizzy", value: "a" },
-        {
-          label:
-            "My hair is fine with a tendency towards early thinning or graying",
-          value: "b",
-        },
-        { label: "I have abundant, thick and oily hair.", value: "c" },
+        { label: "Slow but steady", value: "c" },
+        { label: "Strong and regular ", value: "b" },
+        { label: "Unpredictable and light", value: "a" },
       ],
     },
     {
       id: 4,
-      question: "Which best describes your eyes?",
+      question: "How is your body frame?",
       options: [
-        { label: "My eyes are small and active", value: "a" },
-        { label: "I have a deep and intentional gaze", value: "b" },
-        { label: "I have large pleasant eyes", value: "c" },
+        { label: "Big and strong", value: "c" },
+        { label: "Medium and balanced ", value: "b" },
+        { label: "Thin and light ", value: "a" },
       ],
     },
     {
       id: 5,
-      question: "Which best describes how you talk?",
+      question: "How thirsty do you feel?",
       options: [
-        { label: "Fast and/or a lot!", value: "a" },
-        { label: "My words are sharp and concise", value: "b" },
-        { label: "My speech is slow and calm", value: "c" },
+        { label: "Not very thirsty ", value: "c" },
+        { label: "It varies ", value: "a" },
+        { label: "Very thirsty ", value: "b" },
       ],
     },
     {
       id: 6,
-      question: "What is your sleep pattern like?",
+      question: "Which health issues do you face most?",
       options: [
-        {
-          label: "I am a light sleeper with a tendency to awaken easily",
-          value: "a",
-        },
-        {
-          label:
-            "I am a moderately sound sleeper, usually needing less than eight hours to feel rested",
-          value: "b",
-        },
-        {
-          label:
-            "My sleep is deep and long. I tend to awaken slowly in the morning",
-          value: "c",
-        },
+        { label: "Joint pain, insomnia, anxiety", value: "a" },
+        { label: "Weight gain, sinus issues, mucus buildup", value: "c" },
+        { label: "Acid reflux, skin rashes, anger issues", value: "b" },
       ],
     },
     {
       id: 7,
-      question: "How would you describe your body temperature?",
+      question: "How do your muscles feel?",
       options: [
-        {
-          label:
-            "My hands and feet are usually cold and I prefer warm environments",
-          value: "a",
-        },
-        {
-          label:
-            "I am usually warm, regardless of the season, and prefer cooler environments",
-          value: "b",
-        },
-        {
-          label:
-            "I am adaptable to most temperatures but do not like cold, wet days.",
-          value: "c",
-        },
+        { label: "Soft and well-shaped", value: "c" },
+        { label: "Weak and stiff", value: "a" },
+        { label: "Strong and toned ", value: "b" },
       ],
     },
     {
       id: 8,
-      question: "Which best describes your personality?",
+      question: "What best describes your personality?",
       options: [
-        {
-          label: "I am lively and enthusiastic by nature. I like to change",
-          value: "a",
-        },
-        {
-          label: "I am purposeful and intense. I like to convince",
-          value: "b",
-        },
-        {
-          label: "I am easy going and accepting. I like to support",
-          value: "c",
-        },
+        { label: "Calm and patient ", value: "c" },
+        { label: "Confident and determined ", value: "b" },
+        { label: "Energetic and curious ", value: "a" },
       ],
     },
     {
       id: 9,
-      question: "How do you react to stress?",
+      question: "Which emotion do you experience the most?",
       options: [
-        { label: "I get anxious, confused, worried", value: "a" },
-        { label: "I am easily irratable or aggressive", value: "b" },
-        { label: "I remain calm and like to withdraw", value: "c" },
+        { label: "Irritable and impatient ", value: "b" },
+        { label: "Nervous and overthinking ", value: "a" },
+        { label: "Possessive and attached", value: "c" },
       ],
     },
     {
       id: 10,
-      question: "How best describes your memory?",
+      question: "How do you approach beliefs or spirituality?",
       options: [
-        {
-          label: "I have good short-term memory but easily forget",
-          value: "a",
-        },
-        { label: "I have good medium-term memory", value: "b" },
-        {
-          label:
-            "It takes me longer to grasp things but I have good long-term memory",
-          value: "c",
-        },
+        { label: "I have steady beliefs ", value: "c" },
+        { label: "I am passionate but intense ", value: "b" },
+        { label: "I question and explore a lot ", value: "a" },
+      ],
+    },
+    {
+      id: 11,
+      question: "How is your memory?",
+      options: [
+        { label: "Good but forgets quickly ", value: "a" },
+        { label: "Learns slowly but remembers well ", value: "c" },
+        { label: "Sharp but forgets old things ", value: "b" },
+      ],
+    },
+    {
+      id: 12,
+      question: "How do you sleep?",
+      options: [
+        { label: "Light sleep, wake up easily ", value: "a" },
+        { label: "Long and deep sleep ", value: "c" },
+        { label: "Short but refreshing sleep", value: "b" },
+      ],
+    },
+    {
+      id: 13,
+      question: "Which flavors do you prefer?",
+      options: [
+        { label: "Sweet, bitter, tart ", value: "c" },
+        { label: "Spicy, bitter, tart ", value: "b" },
+        { label: "Sweet, salty, sour", value: "a" },
       ],
     },
   ];
