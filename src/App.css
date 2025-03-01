@@ -1,111 +1,131 @@
-h1,
-h2,
-h3,
-p,
-a {
+/* General styles */
+body {
+  background-color: #1b3b5f; /* Dark blue theme */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   text-align: center;
 }
-button {
-  cursor: pointer;
+
+h1, h2, h3, p, a {
+  color: white;
   text-align: center;
 }
 
-.App-header {
-  background: rgb(214, 91, 166);
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(195, 111, 220, 1) 91%
-  );
-  height: 20px;
-  width: auto;
+button {
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
-/* Full-screen Splash Screen */
+
+/* Header */
+.App-header {
+  background: linear-gradient(135deg, #204973, #406b9c);
+  height: 20px;
+}
+
+/* Splash Screen */
 .splash-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #4b5395;
+  background: #2b4f7a;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Shows hand icon */
+  cursor: pointer;
 }
 
-/* Rectangular box with curved edges */
 .welcome-box {
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(195, 111, 220, 1) 91%
-  );
+  background: rgba(255, 255, 255, 0.1);
   padding: 40px 60px;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   text-align: center;
+}
+
+/* Welcome Page */
+.welcome-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(135deg, #1b3b5f 30%, #4a739f 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Animated Text - Scale Up & Down */
-.welcome-text {
-  color: white;
+.welcome-header h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  animation: scaleUpDown 1.5s infinite ease-in-out;
-  white-space: nowrap;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Small Tap-to-Continue Text */
-.tap-text {
-  color: #ddd;
-  font-size: 1rem;
+.welcome-header p {
+  font-size: 1.2rem;
   margin-top: 10px;
   opacity: 0.8;
-  animation: fadeInOut 1.5s infinite ease-in-out;
 }
 
-/* Text Animation */
-@keyframes scaleUpDown {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+/* Info Cards */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
 }
 
-/* Tap text fades in & out */
-@keyframes fadeInOut {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
 
+/* Start Button */
+.start-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  padding: 15px 40px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 120, 180, 0.5);
+}
+
+/* Quiz Page (Restored to Original) */
 .container {
   margin: 0 auto;
   padding-top: 20px;
   width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro-header h1 {
@@ -124,12 +144,7 @@ button {
   text-align: left;
 }
 .quiz-btn {
-  background: rgb(214, 91, 166);
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(195, 111, 220, 1) 91%
-  );
+  background: linear-gradient(198deg, rgba(214, 91, 166, 1) 19%, rgba(195, 111, 220, 1) 91%);
   border: 0;
   padding: 15px 40px;
   margin: 20px;
@@ -162,103 +177,51 @@ button {
 
 .Question-btn:active,
 .Question-btn-selected {
-  background: rgb(214, 91, 166);
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(108, 207, 246, 1) 91%
-  );
+  background: linear-gradient(198deg, rgba(214, 91, 166, 1) 19%, rgba(108, 207, 246, 1) 91%);
   color: white;
 }
 
-.next-btn {
-  background: rgb(214, 91, 166);
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(195, 111, 220, 1) 91%
-  );
-  padding: 10px 30px;
-  margin: 20px;
-  border-radius: 24px;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: 500;
-  border: 0;
-}
-
-.dosha-info p {
-  text-align: left;
-}
-
+/* Dosha Result Page */
 .dosha-title {
-font-size: 3rem;
-margin-top: 0;
-margin-bottom: 20px;
-display: inline-block;
-  background:linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(108, 207, 246, 1) 91%
-  );
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #ff758c, #ffa07a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.dosha-info h2 {
-  margin-top: 30px;
-}
 .dosha-info {
-   background: #4b5395;
-  margin: 20px;
+  background: #2b4f7a;
   padding: 20px 50px;
   border-radius: 24px;
-  box-shadow: 0px 0px 37px -2px rgba(195,111,220,0.89);
 }
 
-.dosha-info ul {
-  list-style: none;
-  text-align: center;
-  padding-left: 0;
-  color: white;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.dosha-info li {
-  padding-bottom: 13px;
-}
-.dosha-btns {
-  text-align: center;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.dosha-btn {
-  background: rgb(214, 91, 166);
-  background: linear-gradient(
-    198deg,
-    rgba(214, 91, 166, 1) 19%,
-    rgba(195, 111, 220, 1) 91%
-  );
-  padding: 10px 30px;
-  margin: 20px;
-  border-radius: 24px;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: 500;
-  border: 0;
-}
+/* Delayed Animations */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
 
-@media (min-width: 992px) {
+/* Responsive Design */
+@media (min-width: 768px) {
+  .info-cards {
+    flex-direction: row;
+  }
   .container {
     width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-
   .Question-btn {
     width: 100%;
   }
 }
+
+
+

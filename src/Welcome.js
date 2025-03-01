@@ -7,26 +7,33 @@ function Welcome(props) {
   }
 
   return (
-    <div className="container">
-      <section className="intro-header">
-        <h1>DOSHA QUIZ</h1>
+    <div className="welcome-container">
+      {/* Header Section */}
+      <section className="welcome-header">
+        <h1>Discover Your Prakriti</h1>
+        <p>Uncover your dosha balance and achieve inner harmony.</p>
       </section>
-      <section className="intro-copy">
-        <p>
-          Doshas are a central element of Ayurveda and the basis of what makes
-          it such a personalized approach to health. There are three Doshas —
-          Vata, Pitta, and Kapha. By understanding your Dosha and creating a
-          lifestyle accordingly, you’ll enjoy a healthier, more balanced life.
-        </p>
-        <p>
-          This quiz is the first step toward creating that lifestyle. When
-          answering the questions, think about your whole life and not just your
-          most recent condition. Choose the answer that best fits you.
-        </p>
+
+      {/* Info Cards */}
+      <section className="info-cards">
+        <div className="card fade-in">
+          <h2>📖 What You'll Get</h2>
+          <p>Personalized insights based on your Dosha.</p>
+        </div>
+        <div className="card fade-in delay-1">
+          <h2>🔍 How It Works</h2>
+          <p>Answer simple questions & let Ayurveda guide you.</p>
+        </div>
+        <div className="card fade-in delay-2">
+          <h2>🌿 Why Take This Quiz?</h2>
+          <p>Find balance, improve health, and enhance well-being.</p>
+        </div>
       </section>
+
+      {/* Start Button */}
       <section>
-        <button className="quiz-btn" onClick={handleClick}>
-          Which dosha are you?
+        <button className="start-btn" onClick={handleClick}>
+          Start Quiz 🚀
         </button>
       </section>
     </div>
@@ -34,3 +41,4 @@ function Welcome(props) {
 }
 
 export default Welcome;
+
