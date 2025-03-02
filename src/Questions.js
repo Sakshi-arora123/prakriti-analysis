@@ -10,8 +10,8 @@ function Questions(props) {
     if (selected === null) {
       return;
     }
-    if (id + 1 > quizQuestions.length-1) {
-      props.setAppState("result");
+    if (id + 1 > quizQuestions.length - 1) {
+      props.setAppState("spin");
       props.setResults(history);
       return;
     }
@@ -20,7 +20,6 @@ function Questions(props) {
     setSelected(null);
     setId(id + 1);
   }
-
   const quizQuestions = [
     {
       id: 0,
@@ -31,7 +30,7 @@ function Questions(props) {
         { label: "Dry, frizzy, brittle", value: "a" },
       ],
     },
-    {
+    /*{
       id: 1,
       question: "How are your teeth?",
       options: [
@@ -49,7 +48,7 @@ function Questions(props) {
         { label: "Small, active, quick-moving", value: "a" },
       ],
     },
-    {
+   {
       id: 3,
       question: "How is your appetite?",
       options: [
@@ -147,42 +146,43 @@ function Questions(props) {
         { label: "Spicy, bitter, tart ", value: "b" },
         { label: "Sweet, salty, sour", value: "a" },
       ],
-    },
+    },*/
   ];
-
   let currentQuestion = quizQuestions.find((item) => item.id === id);
 
   return (
     <div className="Questions">
       <div className="container">
-        <section className="question-number">
-          <p>
-            Question {id + 1} of {quizQuestions.length}
-          </p>
-        </section>
-        <section className="Question-btns">
-          <h3 className="Question-1">{currentQuestion.question}</h3>
-          <div>
-            {currentQuestion.options.map((option, index) => (
-              <button
-                key={index}
-                className={
-                  selected === option.value
-                    ? "Question-btn-selected Question-btn"
-                    : "Question-btn"
-                }
-                onClick={() => setSelected(option.value)}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </section>
-        <section>
-          <button className="next-btn" onClick={nextClick}>
-            Next Question
-          </button>
-        </section>
+        <div className="Question-container"> {/* Box for Questions */}
+          <section className="question-number">
+            <p>
+              Question {id + 1} of {quizQuestions.length}
+            </p>
+          </section>
+          <section className="Question-btns">
+            <h3 className="Question-1">{currentQuestion.question}</h3>
+            <div>
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  className={
+                    selected === option.value
+                      ? "Question-btn-selected Question-btn"
+                      : "Question-btn"
+                  }
+                  onClick={() => setSelected(option.value)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </section>
+          <section>
+            <button className="next-btn" onClick={nextClick}>
+              Next Question
+            </button>
+          </section>
+        </div>
       </div>
     </div>
   );

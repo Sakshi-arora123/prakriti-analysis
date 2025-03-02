@@ -20,3 +20,6 @@ function SplashScreen({ onClick }) {
 }
 
 export default SplashScreen;
+
+
+

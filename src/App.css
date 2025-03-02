@@ -201,28 +201,184 @@ button {
   cursor: pointer;
 }
 
-.Question-1 {
-  padding-bottom: 20px;
+/* Avatar Selection Page */
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* Centering the container */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);/* Light background */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto; /* Centers it horizontally */
+  margin-top:50px;
+  animation: fadeIn 1s ease-in-out;
 }
 
+.avatar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.avatar-subtext {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Avatar Selection Options */
+.avatar-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Avatar Cards */
+.avatar-card {
+  background: linear-gradient(135deg, #1b3b5f 30%, #4a739f 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.avatar-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Avatar Images */
+.avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.avatar-card:hover .avatar-img {
+  border-color: #ff9800;
+}
+
+.avatar-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .avatar-options {
+    flex-direction: column;
+  }
+
+  .avatar-card {
+    width: 180px;
+  }
+}
+
+/* Style for Question Box */
+.Question-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 90px;
+  text-align: center;
+}
+
+/* Question Number Style */
+.question-number p {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for Question Text */
+.Question-1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 15px;
+}
+
+/* Buttons Container */
+.Question-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Style for Answer Buttons */
 .Question-btn {
   background: white;
-  padding: 15px 40px;
-  margin: 20px;
-  border-radius: 24px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
   text-align: center;
   color: #383d6e;
   font-size: 1rem;
-  text-decoration: none;
   font-weight: 500;
-  width: 90%;
-  border: 0;
+  width: 100%;
+  border: 2px solid #2b4f7a;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.Question-btn:active,
-.Question-btn-selected {
-  background: linear-gradient(198deg, rgba(214, 91, 166, 1) 19%, rgba(108, 207, 246, 1) 91%);
+.Question-btn:hover {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
   color: white;
+}
+
+/* Selected Button Style */
+.Question-btn-selected {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  box-shadow: 0px 4px 15px rgba(255, 120, 180, 0.5);
+  color: white;
+  border: none;
+}
+
+/* Style for Next Button */
+.next-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  box-shadow: 0px 4px 15px rgba(255, 120, 180, 0.5);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background: #1d3a5f;
 }
 
 /* Dosha Result Page */
@@ -265,6 +421,92 @@ button {
   .Question-btn {
     width: 100%;
   }
+}
+
+.SpinWheel-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wheel-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SpinWheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(
+    red 0deg 60deg,
+    yellow 60deg 120deg,
+    green 120deg 180deg,
+    blue 180deg 240deg,
+    orange 240deg 300deg,
+    purple 300deg 360deg
+  );
+  transition: transform 3s ease-out;
+}
+
+/* ✅ Correctly Positioning Each Section */
+.wheel-section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 50%;
+  transform-origin: 0% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+}
+
+/* ✅ Rotating Text Inside Each Section */
+.section-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg); /* Adjust rotation */
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  max-width: 80%;
+  white-space: nowrap;
+}
+
+/* ✅ Adding Pointer to Indicate Winning Section */
+.wheel-pointer {
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  color: red;
+}
+
+/* ✅ Spin Button Styling */
+.spin-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.spin-btn:hover {
+  background-color: #e64a19;
 }
 
 

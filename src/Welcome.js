@@ -3,7 +3,7 @@ import React from "react";
 function Welcome(props) {
   function handleClick(event) {
     event.preventDefault();
-    props.setAppState("questions");
+    props.setAppState("avatar");
   }
 
   return (
