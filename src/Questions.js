@@ -30,7 +30,7 @@ function Questions(props) {
         { label: "Dry, frizzy, brittle", value: "a" },
       ],
     },
-    /*{
+    {
       id: 1,
       question: "How are your teeth?",
       options: [
@@ -57,7 +57,7 @@ function Questions(props) {
         { label: "Unpredictable and light", value: "a" },
       ],
     },
-    {
+   {
       id: 4,
       question: "How is your body frame?",
       options: [
@@ -146,7 +146,7 @@ function Questions(props) {
         { label: "Spicy, bitter, tart ", value: "b" },
         { label: "Sweet, salty, sour", value: "a" },
       ],
-    },*/
+    },
   ];
   let currentQuestion = quizQuestions.find((item) => item.id === id);
 

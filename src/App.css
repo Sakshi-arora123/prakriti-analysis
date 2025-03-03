@@ -455,7 +455,39 @@ button {
   transition: transform 3s ease-out;
 }
 
-/* ✅ Correctly Positioning Each Section */
+.SpinWheel-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wheel-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SpinWheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(
+    red 0deg 60deg,
+    yellow 60deg 120deg,
+    green 120deg 180deg,
+    blue 180deg 240deg,
+    orange 240deg 300deg,
+    purple 300deg 360deg
+  );
+  transition: transform 3s ease-out;
+}
+
+/* Correctly Positioning Each Section */
 .wheel-section {
   position: absolute;
   width: 50%;
@@ -469,23 +501,21 @@ button {
   clip-path: polygon(100% 0, 50% 100%, 0 0);
 }
 
-/* ✅ Rotating Text Inside Each Section */
+/* Centered Text Inside Each Section */
 .section-text {
   position: absolute;
-  width: 100%;
+  width: 80%;
   text-align: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg); /* Adjust rotation */
-  font-size: 12px;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 14px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 2px black;
-  max-width: 80%;
-  white-space: nowrap;
 }
 
-/* ✅ Adding Pointer to Indicate Winning Section */
+/* Pointer to Indicate Winning Section */
 .wheel-pointer {
   position: absolute;
   top: 10px;
@@ -493,21 +523,7 @@ button {
   color: red;
 }
 
-/* ✅ Spin Button Styling */
-.spin-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff5722;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
-}
 
-.spin-btn:hover {
-  background-color: #e64a19;
-}
 
 
 
