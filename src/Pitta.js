@@ -4,6 +4,7 @@ import "./App.css";
 function Pitta() {
   return (
     <div className="container">
+      
       <h1 className="dosha-title">Pitta</h1>
       <section className="dosha-info">
         <p>
@@ -22,19 +23,15 @@ function Pitta() {
           <li>Penetrating</li>
         </ul>
         <h2> How to balance your pitta</h2>
-        <p>
-          Pitta is hot, sharp, sour, pungent, and penetrating. To balance pitta,
-          make choices that are cooling, sweet, and stabilizing. Balance rest
-          and activity, allowing some free time everyday. Be careful not to
-          create unnecessary time pressures for yourself.
-        </p>
-        <p>
-          Regularly spend time in nature. Take walks in the woods and along
-          natural bodies of water. Keep plants and fresh flowers in your home
-          and office. Walk in the moonlight.
-        </p>
-        <p>Do not skip meals and do not wait until you are famished to eat.</p>
-      </section>
+        <ul>
+  <li>Pitta is hot, sharp, sour, pungent, and penetrating. To balance Pitta, make choices that are cooling, sweet, and stabilizing.</li>
+  <li>Balance rest and activity, allowing some free time every day. Be careful not to create unnecessary time pressures for yourself.</li>
+  <li>Regularly spend time in nature. Take walks in the woods and along natural bodies of water.</li>
+  <li>Keep plants and fresh flowers in your home and office.</li>
+  <li>Walk in the moonlight.</li>
+  <li>Do not skip meals and do not wait until you are famished to eat.</li>
+</ul>
+    </section>
     </div>
   );
 }

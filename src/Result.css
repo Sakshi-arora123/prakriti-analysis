@@ -1,0 +1,56 @@
+.result-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 80%; /* Reduce overall width */
+    margin: auto;
+  }
+  
+  /* Flex container for Qualities and How to Balance */
+  .result-section-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reduce spacing */
+    padding: 15px;
+    max-width: 70%; /* Reduce width */
+    margin: auto;
+  }
+  
+  /* Flex container for Dos and Don'ts */
+  .dos-donts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px;
+    max-width: 70%; /* Reduce width */
+    margin: auto;
+  }
+  
+  /* Styling for sections (Qualities, How to Balance, Dos, Don'ts) */
+  .result-section {
+    flex: 1;
+    padding: 15px; /* Reduce padding */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14px; /* Adjust font size */
+  }
+  .dosha-image-container {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .dosha-image {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+  }
+  .dosha-heading {
+    font-size: 200px; /* Increase the font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -20px; /* Moves the text slightly higher */
+   
+  }
+  

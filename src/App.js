@@ -46,11 +46,17 @@ function App() {
       {appState === "avatar" && <AvatarSelection setAppState={setAppState} setAvatar={setAvatar} />}
       {appState === "questions" && <Questions setAppState={setAppState} setResults={setResults} />}
       {appState === "spin" && <SpinWheel results={results} setAppState={setAppState} setFinalDosha={setFinalDosha} />}
-      {appState === "result" && <Result results={results} avatar={avatar} finalDosha={finalDosha} />}
+      {/* {appState === "result" && <Result results={results} avatar={avatar} finalDosha={finalDosha} />} */}
+      {appState === "result" && (
+  <Result
+    dosha={finalDosha}
+    results={results}
+    avatar={avatar}
+  />
+)}
     </div>
   );
 }
 
 export default App;
-
 
