@@ -6,9 +6,10 @@ function SpinWheel({ results, setAppState, setFinalDosha }) {
   const [isSpinning, setIsSpinning] = useState(false);
   const wheelRef = useRef(null);
 
-  // ✅ Store wheel sections in useMemo to prevent re-renders
-  const wheelSections = useMemo(() => ["Pitta", "Vata", "Kapha", "Vatapitta", "Pittakapha", "Vatakapha"], []);
+  // Define the possible Dosha results in order
+  const wheelSections = useMemo(() => ["Vata", "Pitta", "Kapha", "Vatapitta", "Pittakapha", "Vatakapha"], []);
   const sectionAngle = 360 / wheelSections.length;
+  const halfSectionAngle = sectionAngle / 2; // ✅ Adjust for centering
 
   // Function to determine dosha from quiz results
   const determineDosha = () => {
@@ -31,18 +32,20 @@ function SpinWheel({ results, setAppState, setFinalDosha }) {
 
   const dosha = useMemo(determineDosha, [results]);
 
-  // ✅ Determine target rotation for the dosha result
+  // ✅ Compute the exact target rotation to stop at the center of the correct Dosha
   const targetRotation = useMemo(() => {
     const index = wheelSections.indexOf(dosha);
-    return index !== -1 ? index * sectionAngle + 360 * 3 : 0; // 3 full spins before stopping
-  }, [dosha, sectionAngle, wheelSections]);
+    if (index === -1) return 0; // Fallback if dosha is not found
+
+    const baseRotation = 360 * 3; // Three full spins
+    const exactStopAngle = 360 - (index * sectionAngle) - halfSectionAngle; // ✅ Adjusted to center the selected dosha
+    return baseRotation + exactStopAngle;
+  }, [dosha, sectionAngle, halfSectionAngle, wheelSections]);
 
   useEffect(() => {
     if (!isSpinning) return;
 
-    // ✅ Reset rotation before spinning to ensure smooth animation
-    setRotation(0);
-
+    // ✅ Set rotation to ensure exact stop position
     setTimeout(() => {
       setRotation(targetRotation);
     }, 100); // Small delay before spinning
@@ -54,8 +57,7 @@ function SpinWheel({ results, setAppState, setFinalDosha }) {
   }, [isSpinning, targetRotation, setFinalDosha, setAppState, dosha]);
 
   useEffect(() => {
-    // ✅ Automatically start spinning when the component loads
-    setIsSpinning(true);
+    setIsSpinning(true); // ✅ Automatically start spinning when the component loads
   }, []);
 
   return (
@@ -89,16 +91,3 @@ function SpinWheel({ results, setAppState, setFinalDosha }) {
 }
 
 export default SpinWheel;
-
-
-
-
-
-
-
-
-
-
-
-
-
