@@ -1,19 +1,47 @@
-# Creating a Dosha Quiz
+# 🧘‍♂️ Prakriti Analysis – AI-Based Dosha Detection System
 
-![dosha homepage](https://user-images.githubusercontent.com/29425781/152994917-3ec80152-d238-4628-83e4-6800e5e6d463.png)
+An interactive MERN stack web app that determines a user's Ayurvedic Prakriti (Vata, Pitta, Kapha, or their combinations) using an engaging image-based quiz. Based on the result, it provides personalized health, lifestyle, and meditation recommendations.
 
-First up I created a design for the dosha quiz in [Figma](https://www.figma.com/file/ZunMd3aIgTKHU4vtnyq3j8/Dosha-Quiz?node-id=0%3A1) and found a [colour scheme](https://coolors.co/d65ba6-c36fdc-383d6e-4b5395-6ccff6) I liked the look of.
+---
 
-I wanted a quiz where when you select an option and it would remember what you've counted and let you know at the end how many of each button you'd selected. From the initial design, I decided to use a next question button rather than a back button. I personally don't feel like you need to go backwards on such a quiz.
+## 🚀 Features
 
-# Stumbling blocks
+- 👥 Avatar selection (Male/Female)
+- 🖼️ 25 image-based personality quiz questions
+- ⚖️ Dosha calculation logic with combined types (Vata-Pitta, Pitta-Kapha, etc.)
+- 🎡 Spinning wheel animation for dosha reveal
+- 🤖 Prakriti Chatbot (BERT + Python Flask + scraping)
+- 💡 Health and lifestyle suggestions based on result
+- 🌐 Fully responsive UI built with React & Tailwind CSS
 
-To get the initial design and questions up was relatively straightforward. Where I got stuck was with trying to count how many of each button had been clicked (a, b or c). Whichever had the most clicks was the answer. I reached out to the community for some guidance and was given some direction which helped me figure out how to do this. I filtered the results array and used the length of the filtered array to count the a, b and c's. To work out which was clicked the most I used if statements.
+---
 
-![Dosha Quiz counting code](https://laughing-lamarr-1f3b95.netlify.app/media/dosha-quiz-code.png)
+## 🛠️ Tech Stack
 
-# Future improvements
+- **Frontend**: React (Vite), Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Chatbot**: Python (Flask, BERT, web scraping)
+- **Deployment**: Vercel (frontend), Render (backend), local/PythonAnywhere (chatbot)
 
-- I want to create a pie chart with results in to show what percentage of each dosha someone is.
-- Add the ability to go back and change your answer.
-- A reset button on the results page to try the quiz again.
+---
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](./src/screenshot1.png)
+
+### ❓ Quiz Interface
+![Quiz Page](./src/Screenshot2.png)
+
+### 📊 Result Display
+![Result Page](./src/Screenshot%203.png)
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Clone the repo
+
+```bash
+git clone https://github.com/your-username/prakriti-analysis.git
+cd prakriti-analysis
